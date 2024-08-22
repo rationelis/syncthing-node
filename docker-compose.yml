@@ -8,7 +8,8 @@ services:
       - PGID=1000
     volumes:
       - ./data:/config 
-      - ${PATH_TO_MEDIA_VAULT}/in:/config/in
+      - ${MEDIA_VAULT}/media-vault-in:/config/media-vault-in
+      - ${MEDIA_VAULT}/media-vault-out:/config/media-vault-out
     ports:
       - 8384:8384
       - 22000:22000/tcp
